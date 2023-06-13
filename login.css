@@ -1,0 +1,17 @@
+.Header {
+    background-color:  #018787;
+    color: white;}
+
+button#Entrar{
+    background-color:  #018787;
+    color: white;}
+
+.Entrar{
+        text-align: right;}
+
+.LoginBorda{
+    border-radius: 10%;
+    width: 200px}
+
+div#Senha{
+        text-align: right;}

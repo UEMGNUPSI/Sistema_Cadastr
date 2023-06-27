@@ -31,6 +31,9 @@ app.get("/users/:id", (req, res) => {
    });
 });
 
+app.get("/clientes", async (req, res) => {
+    res.json(await db.clientes.findAll());
+})
 
 
 app.listen(8080, () => {

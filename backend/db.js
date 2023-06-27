@@ -1,9 +1,13 @@
 const config = {
     HOST: "localhost",
-    USER: "root",
-    PASSWORD: "",
-    DB: "testdb",
-    dialect: "mysql",
+    USER: "postgres",
+    PASSWORD: "root",
+    DB: "SG",
+    dialect: "postgres",
+    define: {
+      freezeTableName: true,
+      timestamps: false
+    },
 };
   
 const Sequelize = require("sequelize");
@@ -15,6 +19,7 @@ const sequelize = new Sequelize(
     host: config.HOST,
     dialect: config.dialect,
     operatorsAliases: false,
+    define: config.define
   }
 );
 
@@ -23,38 +28,13 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.user = sequelize.define("users", {
-    username: {
-      type: Sequelize.STRING
-    },
-    email: {
-      type: Sequelize.STRING
-    },
-    password: {
-      type: Sequelize.STRING
-    }
-});
-
-db.role = sequelize.define("roles", {
-  id: {
+db.clientes = sequelize.define("Cliente", {
+  cli_pk_id: {
     type: Sequelize.INTEGER,
+    autoIncrement: true,
     primaryKey: true
-  },
-  name: {
-    type: Sequelize.STRING
   }
 });
 
-db.role.belongsToMany(db.user, {
-  through: "user_roles",
-  foreignKey: "roleId",
-  otherKey: "userId"
-});
-
-db.user.belongsToMany(db.role, {
-  through: "user_roles",
-  foreignKey: "userId",
-  otherKey: "roleId"
-});
 
 module.exports = db;

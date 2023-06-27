@@ -2,3 +2,29 @@
     background-color:  #018787;
     color: white;}
 
+body { 
+    overflow-x: hidden;}
+
+label#CamposDistanciaTop{
+   margin-top: 0.5rem;}
+
+div#Lateral-Esquerda{
+    margin-Left: 1.5rem;}
+    
+div#radios{
+    margin-left: 2.3rem;}
+
+div#DataCadastro{
+    margin-left: 52.3rem;}
+
+input#inputObservacao{
+    height:4rem ;}
+
+button#btnEnviar{
+    margin-top: 4rem;
+    margin-left: 22rem;
+    background-color:  #018787;
+    color: white;
+    width: 7rem;
+    height: 2.6rem;}    
+

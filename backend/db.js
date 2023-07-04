@@ -1,5 +1,6 @@
+
 /**
- * @api {get} /user/:cli_pk_id Request User information
+* @api {get} /Cliente/:cli_pk_id Exibir informações do cliente
  * @apiName GetClientes
  * @apiGroup Clientes
  *
@@ -23,7 +24,15 @@
  * @apiSuccess {String} cli_estado Estado do Cliente.
  * @apiSuccess {String} cli_pais País do Cliente.
  * @apiSuccess {String} cli_observacao Observação do Cliente.
-*/ 
+
+ */
+/**
+ * @api {post} /Cliente Criar um novo Cliente
+ * @apiName PutClientes
+ * @apiGroup Clientes
+ */
+
+
 const config = {
     HOST: "localhost",
     USER: "postgres",
@@ -54,7 +63,7 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.clientes = sequelize.define("Cliente", {
+db.Cliente = sequelize.define("Cliente", {
   cli_pk_id: {
     type: Sequelize.INTEGER,
     autoIncrement: true,

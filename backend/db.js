@@ -116,5 +116,27 @@ db.Cliente = sequelize.define("Cliente", {
   
 });
 
+db.usuarios = sequelize.define("Usuario", {
+  usu_pk_id: {
+    type: Sequelize.INTEGER,
+    autoIncrement: true,
+    primaryKey: true
+  },
+  usu_nome: {
+    type: Sequelize.STRING,
+  },
+  usu_senha: {
+    type: Sequelize.STRING,
+  },
+  usu_email: {
+    type: Sequelize.STRING,
+  },
+  usu_grupo: {
+    type: Sequelize.INTEGER,
+  },
+  usu_ativo: {
+    type: Sequelize.INTEGER,
+  }
+});
 
 module.exports = db;

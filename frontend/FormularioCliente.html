@@ -32,13 +32,24 @@
     
     <form class="row g-3">
     <div class="form-check form-check-inline" id="radios">
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadioPessoaFisica" value="option1">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadioPessoaFisica" value="pf">
       <label class="form-check-label" for="inlineRadioPessoaFisica">Pessoa Fisíca</label>
     </div>
     <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadioPessoaJuridica" value="option2">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadioPessoaJuridica" value="pj">
       <label class="form-check-label" for="inlineRadioPessoaJuridica">Pessoa Jurídica</label>
     </div>
+    <script>
+    $("input[name=inlineRadioOptions]").on('change', function() {
+      if ($(this).val() == "pf") {
+        document.getElementById('staticCPF').innerHTML = 'IE';
+    
+       
+    
+      } 
+    }).change();
+    </script>
+
     <div class="col-sm-2" id="DataCadastro" >
       <label for="staticDataCadastro" class="visually-hidden" >Data de Cadastro</label>
       <input type="date" class="form-control" id="inputDataCadastro" placeholder="">

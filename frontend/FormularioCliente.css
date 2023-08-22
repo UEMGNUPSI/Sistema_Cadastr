@@ -5,8 +5,23 @@
 body { 
     overflow-x: hidden;}
 
-.CamposDistanciaTop{
+label#CamposDistanciaTop{
    margin-top: 0.5rem;}
+
+label#RGlabel{
+   margin-top: 0.5rem;}   
+
+label#Nomelabel{
+   margin-top: 0.5rem;}   
+
+label#Apelidolabel{
+   margin-top: 0.5rem;}   
+
+label#CPFlabel{
+margin-top: 0.5rem;}   
+
+label#DTNlabel{
+    margin-top: 0.5rem;}   
 
 div#Lateral-Esquerda{
     margin-Left: 1.5rem;}

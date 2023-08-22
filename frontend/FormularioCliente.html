@@ -18,7 +18,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    
+    <script type="text/javascript" src="FormularioCliente.js"></script>
   
   
     <!-- Como um span -->
@@ -30,25 +30,17 @@
     
     
     
-    <form class="row g-3">
+    <form class="row g-3" name="pessoa">
     <div class="form-check form-check-inline" id="radios">
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadioPessoaFisica" value="pf">
+      <input class="form-check-input" type="radio" name="pf_pj" id="inlineRadioPessoaFisica"  value="pf"  onClick="troca1()">
       <label class="form-check-label" for="inlineRadioPessoaFisica">Pessoa Fisíca</label>
     </div>
     <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadioPessoaJuridica" value="pj">
+      <input class="form-check-input" type="radio" name="pf_pj" id="inlineRadioPessoaJuridica" value="pj" onClick="troca2()">
       <label class="form-check-label" for="inlineRadioPessoaJuridica">Pessoa Jurídica</label>
     </div>
-    <script>
-    $("input[name=inlineRadioOptions]").on('change', function() {
-      if ($(this).val() == "pf") {
-        document.getElementById('staticCPF').innerHTML = 'IE';
     
-       
-    
-      } 
-    }).change();
-    </script>
+ 
 
     <div class="col-sm-2" id="DataCadastro" >
       <label for="staticDataCadastro" class="visually-hidden" >Data de Cadastro</label>
@@ -56,7 +48,7 @@
     </div></form>
     <form class="row g-3">
     <div class="col-sm-5 " id="Lateral-Esquerda">
-        <label for="staticNome" class="visually-hidden" id="CamposDistanciaTop">Nome</label>
+        <label for="Nome" class="visually-hidden" id="CamposDistanciaTop" id="Nome">Nome</label>
         <input type="text" class="form-control" id="inputNome" placeholder="">
     </div>
     <div class="col-sm-4" >
@@ -70,8 +62,9 @@
       <label for="inputDataNascimento" class="visually-hidden" id="CamposDistanciaTop">Data de Nascimento</label>
       <input type="date" class="form-control" id="inputDataNascimento" placeholder="">
     </div>
+    
     <div class="col-sm-2" >
-      <label for="staticRG" class="visually-hidden" id="CamposDistanciaTop">RG</label>
+      <label for="staticRG" class="visually-hidden"  id="RGlabel">RG</label>
       <input type="text" class="form-control me-2" id="inputRG" placeholder="">
     </div>
     <div class="col-sm-2">

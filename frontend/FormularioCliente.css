@@ -5,7 +5,7 @@
 body { 
     overflow-x: hidden;}
 
-label#CamposDistanciaTop{
+.CamposDistanciaTop{
    margin-top: 0.5rem;}
 
 div#Lateral-Esquerda{

@@ -30,5 +30,19 @@ function troca1(){
 
     var Nomelabel = document.getElementById('Nomelabel');
     Nomelabel.innerHTML = 'Razão Social';
+
+    
+
+
     };
+
+    function DataAtual(){
+        Dataatual= new Date();
+        year = Dataatual.getFullYear();
+        month = Dataatual.getMonth() + 1;
+        day = Dataatual.getDate();
+        document.getElementById("Dataatual").innerHTML =  day + "/" + month + "/" + year;
+   }
+
+
     
